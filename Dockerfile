@@ -10,5 +10,8 @@ ADD install_dotnet_and_octo.sh /root/install_dotnet_and_octo.sh
 RUN chmod +x /root/install_dotnet_and_octo.sh
 RUN /root/install_dotnet_and_octo.sh
 
+ENV PATH="/root/.octo:${PATH}"
+ENV PATH="/root/.dotnet:${PATH}"
+
 # Install gulp globally
 RUN npm install -g gulp@4 --unsafe-perm
