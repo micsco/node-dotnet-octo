@@ -155,7 +155,8 @@ download_extract(){
 
     say "Extracting package"
     tar -xzf "$zip_path" -C "$octo_dir" > /dev/null || extract_failed=true
-
+    rm -rf $zip_path
+    
     if [ "$extract_failed" = true ]; then
         say_err "Extraction failed"
         return 1
