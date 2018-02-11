@@ -5,6 +5,6 @@ RUN apt-get update -qq
 # Install libunwind
 RUN apt-get install libunwind8 -y
 
-ADD install_dotnet_and_octo.sh /
-RUN chmod +x /install_dotnet_and_octo.sh
-RUN /install_dotnet_and_octo
+ADD install_dotnet_and_octo.sh /root/install_dotnet_and_octo.sh
+RUN chmod +x /root/install_dotnet_and_octo.sh
+RUN /root/install_dotnet_and_octo
