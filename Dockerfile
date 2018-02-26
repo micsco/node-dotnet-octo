@@ -37,4 +37,4 @@ RUN yarn global add gulp@4 && \
     rm -rf /tmp/*
 
 # Install puppeteer (no delete cache)
-RUN yarn global install puppeteer@1.1
+RUN yarn global add puppeteer@1.1
