@@ -14,7 +14,7 @@ RUN google-chrome --version
 
 CMD ["google-chrome-stable", "google-chrome"]
 
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Install libunwind
 RUN apt-get update \
