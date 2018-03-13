@@ -65,5 +65,5 @@ RUN yarn global add gulp@4 && \
 RUN yarn global add puppeteer@1.1
 
 # Run everything after as non-privileged user.
-USER node
+# USER node
 ENTRYPOINT ["dumb-init", "--"]
