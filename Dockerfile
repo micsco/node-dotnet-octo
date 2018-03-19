@@ -62,7 +62,7 @@ RUN yarn global add gulp@4 && \
     rm -rf /tmp/*
 
 # Install puppeteer (no delete cache)
-RUN yarn global add puppeteer@1.1
+RUN yarn global add puppeteer@1.2
 
 # Run everything after as non-privileged user.
 # USER node
