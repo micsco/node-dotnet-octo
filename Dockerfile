@@ -46,7 +46,13 @@ RUN apt-get update \
         libgtk-3-0 \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y 
+RUN apt-get -y -qq update && \
+	apt-get install -y -qq curl && \
+	apt-get clean
+#
+# install jq to parse json within bash scripts
+RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
+  chmod +x /usr/local/bin/jq
 
 # Dotnet and Octo Script
 ADD install_dotnet_and_octo.sh /root/install_dotnet_and_octo.sh
